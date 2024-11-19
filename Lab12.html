@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratorio 12</title>
+  </head>
+  <body>
+    <header><h1>This is a basic program - Laboratorio 12</h1></header>
+
+    <h1>Parte 1: Recorrer array</h1>
+    <script>
+      let array = [1, 2, 3, 4, 5];
+      let suma = 0;
+      for (let i = 0; i < array.length; i++) {
+        suma += array[i];
+      }
+      document.write("La suma es: ", suma);
+    </script>
+    <!-- R/ El promedio se calcula dividiendo la suma de los elementos del array entre la longitud del array -->
+
+    <h1>Parte 2: Ciclo while</h1>
+    <!-- <script>
+        let number = 0;
+        let w = false;
+        while(!w) {
+            number = parseInt(prompt("Enter a number"));
+            if(number < 0){
+                alert("You entered a negative number");
+                w = true;
+            }else{
+                alert("You entered a positive number");
+                continue;
+            }
+        }
+        document.write("Usted a salido del ciclo");
+    </script> -->
+    <!-- R/Al iniciar el ciclo con un numero negativo, el ciclo simplemente ingresara y se terminara en esa primera iteraccion -->
+
+    <h1>Parte 3: Ciclo do while</h1>
+    <script>
+      let password = "miguel12";
+      let userPassword = "";
+      do {
+        userPassword = prompt("Enter a password");
+        if (userPassword === password) {
+          alert("Password correct");
+          break;
+        } else {
+          alert("Password incorrect");
+          continue;
+        }
+      } while (true);
+      document.write("A salido del ciclo");
+    </script>
+    <!-- R/ El do while permite que se ingrese de forma libre a la primera iteraccion, sin realizar validacion while,
+    si la clave es correcta a la primera ireacion, el ciclo terminara antes de validar el while -->
+  </body>
+</html>
